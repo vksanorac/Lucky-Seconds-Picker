@@ -7,24 +7,21 @@ class HomeCard extends StatelessWidget {
   Widget? child;
   double? borderRadius;
 
-  HomeCard({
-    required this.height,
-    required this.width,
-    required this.backgroundColor,
-    required this.child,
-    this.borderRadius = 15.0
-  });
+  HomeCard(
+      {required this.height,
+      required this.width,
+      required this.backgroundColor,
+      required this.child,
+      this.borderRadius = 15.0});
   @override
   Widget build(BuildContext context) {
     return Container(
       height: height,
       width: width,
       decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(borderRadius!)
-      ),
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(borderRadius!)),
       child: child,
     );
   }
-
 }

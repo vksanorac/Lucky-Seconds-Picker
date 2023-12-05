@@ -1,4 +1,3 @@
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DataRepository {
@@ -6,7 +5,7 @@ class DataRepository {
     int? existingCount = await getSuccessCount();
     print("existing count === ${existingCount}");
     final SharedPreferences pref = await SharedPreferences.getInstance();
-    pref.setInt("count", existingCount!+count);
+    pref.setInt("count", existingCount! + count);
   }
 
   static Future<int?> getSuccessCount() async {

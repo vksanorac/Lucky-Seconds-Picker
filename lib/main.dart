@@ -3,14 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kjbn_test/views/home/cubit/home_screen_cubit.dart';
 import 'package:kjbn_test/views/home/home_screen.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(BlocProvider<HomeScreenCubit>(
-      lazy: false,
-      create: (BuildContext context) {
-        return HomeScreenCubit()..init();
-        },
-        child: const MyApp(),
+    lazy: false,
+    create: (BuildContext context) {
+      return HomeScreenCubit()..init();
+    },
+    child: const MyApp(),
   ));
 }
 
@@ -31,4 +31,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
